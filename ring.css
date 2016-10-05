@@ -1,0 +1,74 @@
+/*
+    Stylesheet for "The Ring"
+    Author: Debojyoti Ghosh
+    Date: Sep 22, 2016
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #555;
+}
+
+.ring-wrap {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    width: 500px;
+    height: 500px;
+
+    background-color: #fff;
+
+    z-index: 5;
+}
+
+.ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 100%;
+    border: 5px solid;
+    transition: transform .2s ease-in;
+    display: block;
+}
+.ring.base {
+    left: 3px;
+    top: 3px;
+
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+
+    border-color: #ccc;
+    border-width: 2px;
+}
+
+.ring.container {
+    border: none;
+}
+.ring.container.less {
+    clip: rect(0, auto, auto, 250px); /* The area enclosed by the 4 values is visible; the rest isn't */
+}
+
+.ring.rating {
+    border-color: #f77 #f77 transparent transparent;
+}
+.rating.initial {
+    transform: rotateZ(45deg);
+}
+.less .final {
+    display: none;
+}
