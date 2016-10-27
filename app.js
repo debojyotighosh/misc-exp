@@ -33,9 +33,9 @@ function prev() {
     // Get current index
     var index = $(".button-wrapper").attr("data-indexer");
     index = parseInt(index);
-    // console.log('#thumb-' + (index + 1));
+    console.log('#thumb-' + (index + 1));
 
-    if($('#thumb-' + (index + 1)).length) {
+    if($("#thumb-" + (index + 1)).length) {
         // Change data-indexer attribute
         $(".button-wrapper").attr("data-indexer", index + 1);
 
@@ -44,5 +44,11 @@ function prev() {
         $("#thumb-" + index).attr("class", "thumbnail stack-intermediate-upper");
         $("#thumb-" + (index - 1)).attr("class", "thumbnail stack-intermediate-lower");
         $("#thumb-" + (index - 2)).attr("class", "thumbnail stack-bottom");
+    }
+    else {
+        $("#thumb-" + (index)).addClass("shake");
+        setTimeout(function() {
+            $("#thumb-" + (index)).removeClass("shake");
+        }, 600)
     }
 }
