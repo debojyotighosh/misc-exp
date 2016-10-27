@@ -7,8 +7,8 @@
 "use strict";
 
 $(function() {
-    $("#next").on("click", next)
-    $("#prev").on("click", prev)
+    $("#next").on("click", next);
+    $("#prev").on("click", prev);
 });
 
 function next() {
