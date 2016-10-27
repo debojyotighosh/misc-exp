@@ -1,0 +1,36 @@
+/*
+    Responsive styles for "The Gallery"
+    Author: Debojyoti Ghosh
+    Date: Oct 27, 2016
+*/
+
+@media (min-width: 361px) {
+    /* Mobile container */
+
+    .gallery-wrapper {
+        margin: calc(50vh - 240px) calc(50% - 160px) 0 calc(50% - 160px);
+        width: 320px;
+        height: 480px;
+
+        border: 1px solid #555;
+    }
+
+    /* Button controls */
+
+    .button-wrapper {
+        border-top: 1px solid #555;
+    }
+    .button-wrapper .button {
+        line-height: 39px;
+    }
+
+    /* Main thumbnail section */
+
+    .thumbnail {
+        box-shadow: 0 0 0 0 #aaa;
+    }
+
+    .thumbnail.stack-top {
+        box-shadow: 0 0 5px 0 #aaa;
+    }
+}

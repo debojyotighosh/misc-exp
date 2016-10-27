@@ -1,3 +1,9 @@
+/*
+    Main stylesheet for "The Gallery"
+    Author: Debojyoti Ghosh
+    Date: Oct 27, 2016
+*/
+
 @font-face {
     font-family: "Comfortaa Light";
     src: url('fonts/Comfortaa-Light.ttf');
@@ -24,13 +30,13 @@ body {
 
 .gallery-wrapper {
     position: relative;
-    margin: calc(50vh - 240px) calc(50% - 160px) 0 calc(50% - 160px);
-    width: 320px;
-    height: 480px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 
     background-color: #f7f7f7;
 
-    border: 1px solid #555;
+    border: none;
     overflow: hidden;
     float: left;
 }
@@ -43,16 +49,13 @@ body {
     bottom: 0;
     width: 100%;
     height: 40px;
-    /*background-color: #555;*/
-    border-top: 1px solid #555;
 }
 .button-wrapper .button {
     width: 50%;
     height: 100%;
 
     color: #ccc;
-    /*font-size: 1em;*/
-    line-height: 39px;
+    line-height: 40px;
     text-align: center;
     background-color: #666;
 
@@ -82,12 +85,11 @@ body {
     width: 300px;
     height: 250px;
 
-    /*transform-origin: center;*/
-    transition: all ease-in-out .5s;
+    /*box-shadow: 0 0 0 0 #aaa;*/
+    transition: all ease-in-out .4s;
 }
 
 .thumbnail.stack-base {
-    /*background-color: #ccc;*/
     align-items: center;
     justify-content: center;
     display: flex;
@@ -107,9 +109,10 @@ body {
 .thumbnail.stack-top {
     background-color: #fff;
     transform: rotate(0deg);
+    box-shadow: 0 0 5px 0 #aaa;
 }
 .thumbnail.stack-out {
     background-color: #eee;
     transform: rotate(-20deg);
-    left: calc(-100% - 50px);
+    left: calc(-130%);
 }

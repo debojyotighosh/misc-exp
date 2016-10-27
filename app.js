@@ -1,3 +1,9 @@
+/*
+    Main script for "Gallery"
+    Author: Debojyoti Ghosh
+    Date: Oct 27, 2016
+*/
+
 "use strict";
 
 $(function() {
@@ -9,7 +15,6 @@ function next() {
     // Get current index
     var index = $(".button-wrapper").attr("data-indexer");
     index = parseInt(index);
-    console.log(index);
 
     if(index >= 0) {
         // Change data-indexer attribute
@@ -27,9 +32,8 @@ function prev() {
     // Get current index
     var index = $(".button-wrapper").attr("data-indexer");
     index = parseInt(index);
-    console.log(index);
 
-    if($('#thumb-' + (index + 1)).length > 0) {
+    if($('#thumb-' + (index + 1)).length) {
         // Change data-indexer attribute
         $(".button-wrapper").attr("data-indexer", index + 1);
 
