@@ -9,6 +9,20 @@
 $(function() {
     $("#next").on("click", next);
     $("#prev").on("click", prev);
+
+    var blue      = document.getElementById('blue');
+    var hammer    = new Hammer.Manager(blue);
+    var swipe     = new Hammer.Swipe();
+
+    hammer.add(swipe);
+
+    hammer.on('swipeleft', function(){
+        $("#next").trigger("click");
+    });
+
+    hammer.on('swiperight', function(){
+        $("#prev").trigger("click");
+    });
 });
 
 function next() {
