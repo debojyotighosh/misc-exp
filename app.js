@@ -15,8 +15,9 @@ function next() {
     // Get current index
     var index = $(".button-wrapper").attr("data-indexer");
     index = parseInt(index);
+    // console.log(index);
 
-    if(index >= 0) {
+    if(index >= 3) {
         // Change data-indexer attribute
         $(".button-wrapper").attr("data-indexer", index - 1);
 
@@ -32,6 +33,7 @@ function prev() {
     // Get current index
     var index = $(".button-wrapper").attr("data-indexer");
     index = parseInt(index);
+    // console.log('#thumb-' + (index + 1));
 
     if($('#thumb-' + (index + 1)).length) {
         // Change data-indexer attribute
