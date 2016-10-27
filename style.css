@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Comfortaa Light";
+    src: url('fonts/Comfortaa-Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Comfortaa Light", arial, sans-serif;
+}
+
+
+/* Mobile container */
+
+.gallery-wrapper {
+    position: relative;
+    margin: calc(50vh - 240px) calc(50% - 160px) 0 calc(50% - 160px);
+    width: 320px;
+    height: 480px;
+
+    background-color: #f7f7f7;
+
+    border: 1px solid #555;
+    overflow: hidden;
+    float: left;
+}
+
+
+/* Button controls */
+
+.button-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    /*background-color: #555;*/
+    border-top: 1px solid #555;
+}
+.button-wrapper .button {
+    width: 50%;
+    height: 100%;
+
+    color: #ccc;
+    /*font-size: 1em;*/
+    line-height: 39px;
+    text-align: center;
+    background-color: #666;
+
+    display: block;
+    cursor: pointer;
+    float: left;
+}
+.button-wrapper .button:first-of-type {
+    border-right: 1px solid #555;
+}
+
+
+/* Main thumbnail section */
+
+.thumbnail-wrapper {
+    position: relative;
+    margin: 100px calc(50% - 150px) 0 calc(50% - 150px);
+    width: 300px;
+    height: 250px;
+
+    float: left;
+}
+
+.thumbnail {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 250px;
+
+    /*transform-origin: center;*/
+    transition: all ease-in-out .5s;
+}
+
+.thumbnail.stack-base {
+    /*background-color: #ccc;*/
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.thumbnail.stack-bottom {
+    background-color: #ccc;
+    transform: rotate(30deg);
+}
+.thumbnail.stack-intermediate-lower {
+    background-color: #ddd;
+    transform: rotate(20deg);
+}
+.thumbnail.stack-intermediate-upper {
+    background-color: #eee;
+    transform: rotate(10deg);
+}
+.thumbnail.stack-top {
+    background-color: #fff;
+    transform: rotate(0deg);
+}
+.thumbnail.stack-out {
+    background-color: #eee;
+    transform: rotate(-20deg);
+    left: calc(-100% - 50px);
+}
