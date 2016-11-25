@@ -21,9 +21,10 @@ Date: Sep 22, 2016
         <div class="ring-wrap">
             <span class="ring base initial"></span>
 
-            <!-- Apply class 'less' to container if 'x'% is8 less than 50% -->
+            <!-- Apply class 'less' to container if 'x'% is less than 50% -->
             <span class="ring container">
                 <!-- For x% (less than 50%), rotateZ value will be [(x * 3.6) - 135] deg -->
+                <!-- For x% (>= 50%), rotateZ value will always be set to 45 deg -->
                 <span class="ring rating initial" style="transform: rotateZ(45deg)"></span>
 
                 <!-- For x% (50% onwards), rotateZ value will be [(x - 50) * 3.6 + 45] deg -->
